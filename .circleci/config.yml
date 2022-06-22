@@ -14,24 +14,8 @@ jobs:
   print_world:
     docker:
       - image: circleci/node:13.8.0
-<<<<<<< HEAD
     steps:
       - run: echo world
-
-  build:
-    docker:
-      - image: cimg/base:2021.11
-    steps:
-      - checkout
-      - run:
-          name: "echo an env var that is part of our project"
-          command: |
-            echo $MY_ENV_VAR # this env var must be set within the project
-
-=======
-    steps:
-      - run: echo world
->>>>>>> cbbf0407a79c2852b551ace43bb8bf0bd2956028
 workflows:
   # Name the workflow "welcome"
   welcome:
@@ -42,11 +26,3 @@ workflows:
       - print_world:
           requires:
             - print_hello
-<<<<<<< HEAD
-
-  test-env-vars:
-    jobs:
-      - build
-
-=======
->>>>>>> cbbf0407a79c2852b551ace43bb8bf0bd2956028
